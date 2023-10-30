@@ -47,6 +47,7 @@ INSERT INTO accounts (
 type CreateAccountParams struct {
 	Owner   string `db:"owner"`
 	Balance int64  `db:"balance"`
+	Currency string `db:"currency"`
 }
 
 func (q *Queries) CreateAccount(ctx context.Context, arg CreateAccountParams) (Account, error) {
